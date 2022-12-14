@@ -4,7 +4,10 @@
   "description": "Cypress test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "npx cypress open",
+    "cy:run" : "npx cypress run" ,
+    "cy:db": "npx cypress run --record --key a9703395-664b-4a53-ba9c-78e68e7aa85b"
+
   },
   "repository": {
     "type": "git",
