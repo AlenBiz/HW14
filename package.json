@@ -4,9 +4,9 @@
   "description": "Cypress test",
   "main": "index.js",
   "scripts": {
-    "cy:open": "npx cypress open",
-    "cy:run" : "npx cypress run" ,
-    "cy:db": "npx cypress run --record --key a9703395-664b-4a53-ba9c-78e68e7aa85b"
+    "cyopen": "npx cypress open",
+    "cyrun" : "npx cypress run" ,
+    "cydb": "npx cypress run --record --key a9703395-664b-4a53-ba9c-78e68e7aa85b"
 
   },
   "repository": {
