@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-describe.only("Testing Header", () => {
+describe("Testing Header", () => {
   beforeEach("Visit", () => {
-    cy.visit('https://staging.lpitko.ru/');
+    cy.visit('/');
   });
 
   it("header have LogIn", () => {
