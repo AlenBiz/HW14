@@ -1,8 +1,10 @@
+Cypress.config('baseUrl', 'https://santa-secret.ru/')
+
 describe("Testing for HW 15", () => {
   beforeEach("Visit", () => {
     cy.visit("/login");
-    cy.get('input[name="email"]').type("testbizyaev@gmail.com");
-    cy.get('input[name="password"]').type("rty123");
+    cy.get('input[name="email"]').type("edubizyaev@gmail.com");
+    cy.get('input[name="password"]').type("rty1234");
     cy.get(
       "#root > div.layout-1 > section.layout-1__main-wrapper > div.layout-1__main > section > div > section > div > div.form-auth__button > div"
     ).click();
@@ -16,6 +18,13 @@ describe("Testing for HW 15", () => {
       "#root > div.layout-1 > section.layout-1__main-wrapper > div.layout-1__footer > section > div > footer > section > div.footer__right-items > div > span"
     ).should("have.text", "© 2014-2022 Santa-Secret");
     cy.url().should("include", "/");
+  });
+  it("Create box1", () => {
+    cy.get("div.btn-main").click();
+    cy.get(
+      "#root > div.layout-1 > section.layout-1__main-wrapper > div.layout-1__main.layout-1__main--wide > section > div > div > div.form-card__header > span"
+    ).should("have.text", "Придумайте название коробке");
+    cy.url().should("include", "/box/new");
   });
 
   it("Create box", () => {
